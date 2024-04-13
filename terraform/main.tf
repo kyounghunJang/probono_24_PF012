@@ -39,13 +39,13 @@ resource "google_container_node_pool" "primary_nodes" {
     }
   }
 }
-resource "helm_release" "airflow" {
-  name       = "airflow"
-  repository = "https://airflow-helm.github.io/charts"
-  chart      = "airflow"
-  namespace  = "airflow"
-  set {
-    name  = "executor"
-    value = "KubernetesExecutor"
-  }
-}
+# resource "helm_release" "airflow" {
+#   name       = "airflow"
+#   repository = "https://airflow-helm.github.io/charts"
+#   chart      = "airflow"
+#   namespace  = "airflow"
+#   set {
+#     name  = "executor"
+#     value = "KubernetesExecutor"
+#   }
+# }
